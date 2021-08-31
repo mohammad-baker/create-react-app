@@ -1,5 +1,7 @@
 import React from "react";
 import Card from 'react-bootstrap/Card'
+import Button from 'react-bootstrap/Button';
+
 class HornedBeasts extends React.Component{
    constructor(props){
      super(props);
@@ -12,6 +14,10 @@ class HornedBeasts extends React.Component{
 votes:this.state.votes +1
     });
    };
+   model = () =>{
+    this.props.handleClose();
+    this.props.handleSelcet(this.props.title,this.props.description,this.props.image_url);
+   };
   render(){
       
         return(
@@ -19,11 +25,11 @@ votes:this.state.votes +1
   <center>
 
 
-
+{/* <img src={this.image_url}/> */}
 
 
 <Card style={{ width: '18rem' }}>
-  <Card.Img variant="top" src={this.props.image_url}rounded  />
+  <Card.Img variant="top" src={this.props.image_url}rounded  onClick={this.model}/>
   <Card.Body>
     <Card.Title>
 {this.props.title}
@@ -33,8 +39,8 @@ votes:this.state.votes +1
   {this.props.description}
 
     </Card.Text>
-    <button variant="primary"onClick={this.increaseVots}>add votes {this.state.votes} ❤
-</button>
+    <Button variant="primary"onClick={this.increaseVots}>add votes {this.state.votes} ❤
+</Button>
 <Card.Title>
 {this.state.votes}
 
@@ -50,5 +56,5 @@ votes:this.state.votes +1
         )
     }
 }
-export default HornedBeasts
+export default HornedBeasts;
 //now I saw that i should make pull requst
