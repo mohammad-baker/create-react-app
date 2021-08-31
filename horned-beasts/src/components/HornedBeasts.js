@@ -33,7 +33,7 @@ votes:this.state.votes +1
   {this.props.description}
 
     </Card.Text>
-    <button variant="primary"onClick={this.increaseVots}>add votes {this.state.votes} \u{2665}
+    <button variant="primary"onClick={this.increaseVots}>add votes {this.state.votes} ❤
 </button>
 <Card.Title>
 {this.state.votes}
