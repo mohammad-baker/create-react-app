@@ -14,13 +14,15 @@ class HornedBeasts extends React.Component{
 votes:this.state.votes +1
     });
    };
-   model = () =>{
+   showTheHornes = () =>{
     this.props.handleClose();
     this.props.handleSelcet(this.props.title,this.props.description,this.props.image_url);
    };
   render(){
       
         return(
+      
+        
 <div> 
   <center>
 
@@ -28,8 +30,8 @@ votes:this.state.votes +1
 {/* <img src={this.image_url}/> */}
 
 
-<Card style={{ width: '18rem' }}>
-  <Card.Img variant="top" src={this.props.image_url}rounded  onClick={this.model}/>
+<Card style={{ width: '30rem' }}>
+  <Card.Img variant="top" src={this.props.image_url}rounded  onClick={this.showTheHornes}/>
   <Card.Body>
     <Card.Title>
 {this.props.title}

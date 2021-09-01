@@ -17,6 +17,8 @@ class Main extends React.Component {
               image_url={dataJson.image_url}
               description={dataJson.description}
                             handleClose={this.props.handleClose}
+            showTheHornes={this.props.showTheHornes}
+
 
             />
             <SelectedBeast
