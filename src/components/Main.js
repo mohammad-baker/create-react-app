@@ -21,7 +21,7 @@ class Main extends React.Component {
   //   }
   // }
   render() {
-    console.log(this.props);
+    console.log(this.props.numHorns);
     return (
       <main>
         {this.props.numHorns.map((dataJson) => {
