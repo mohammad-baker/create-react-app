@@ -12,7 +12,7 @@ class FormHorns extends React.Component {
   getNumOfHorn = (e) => {
     e.preventDefault();
     if (e.target.value === "0") {
-      return this.props.showTheHornes(0);
+      return this.props.showTheHornes("0");
     } else {
       this.props.showTheHornes(e.target.value);
     }
